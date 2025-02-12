@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bill Mutuku - Data Science & AI Enthusiast</title>
@@ -105,9 +106,32 @@ footer {
     width: 100%;
     z-index: 1000; /* Ensure it's above other content */
 }
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
 }
 
+.social-media a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #333;
+    transition: color 0.3s ease-in-out, transform 0.2s;
+}
 
+.social-media a:hover {
+    color: #007bff;
+    transform: scale(1.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .social-media a {
+        font-size: 20px; /* Slightly smaller icons on mobile */
+    }
+}
 </style>
 </head>
 
@@ -115,11 +139,11 @@ footer {
    
     <header>
         <h1>Bill Mutuku</h1>
-        <h4>Data Science & AI Enthusiast</h4>
+        <h4>Data Science/AI Enthusiast</h4>
         <p class="moving-text"> “I visualise a time when we will be to robots what dogs are to humans, and I’m rooting for the machines.” —Claude Shannon </p>
     </header>
  <!-- Scroll-up button -->
-    <button id="scrollUpBtn" onclick="scrollToTop()">To Top</button>
+    <button id="scrollUpBtn" onclick="scrollToTop()">Top</button>
 
    <div id="navbar"> <nav>
         <a href="#about">About</a>
@@ -136,36 +160,18 @@ footer {
     </section>
 
     <section id="blog">
-        <h2>Weekly AI Topics</h2>
+        <h2>I am Moving things around. New website link to be shared here soon. It's about to get bigger and Better.</h2>
         
-        <h3>Planning for Your Next Career Move in Data Science and Machine Learning</h3>
-        <p>Data science and machine learning professionals are facing uncertainty from multiple directions: the global economy, AI-powered tools and their effects on job security, and an ever-shifting tech stack, to name a few. Is it even possible to talk about recession-proofing or AI-proofing one’s career these days?</p>
-<p>The most honest answer we can give is “we don’t really know,” because as we’ve seen with the rise of LLMs in the past couple of years, things can and do change very quickly in this field (and in tech more broadly). That, however, doesn’t mean we should just resign ourselves to inaction, let alone despair.</p>
-<p>Even in challenging times, there are ways to assess the situation, think creatively about our current position and what changes we’d like to see, and come up with a plan to adjust our skills, self-presentation, and mindset accordingly. The articles selected this week each tackle one (or more) of these elements, from excelling as an early-career data scientist to becoming an effective communicator. They offer pragmatic insights and a healthy dose of inspiration for practitioners across a wide range of roles and career stages. Let’s dive in!</p></li>
-<ul><li><p><b><a style="text-decoration:none" href="https://towardsdatascience.com/the-most-undervalued-skill-for-data-scientists-e0e0d7709321">The Most Undervalued Skill for Data Scientists.</a></b> “Over the last years, I have realized that writing is an essential skill for data scientists, and that the ability to write well is one of the key things that sets high-impact data scientists apart from their peers.” Tessa Xie makes a compelling case for working on your writing—and goes on to share concrete tips on how to get started.</p></li>
-<li><p><b><a style="text-decoration:none" href="https://towardsdatascience.com/lessons-learned-as-a-data-science-manager-and-why-im-moving-back-to-an-individual-contributor-role-65585b2e8dde">Leading by Doing: Lessons Learned as a Data Science Manager and Why I’m Opting for a Return to an Individual Contributor Role.</a></b>  As Drahomira (Dasha) Herrmannova, Ph.D. makes clear in a thoughtful reflection on role changes, success at work often comes not so much from a particular talent or ability (though those help too, of course), but from finding strong alignment between your job and your goals, values, and priorities.</p></li>
-<li><p><b><a style="text-decoration:none" href="https://towardsdatascience.com/how-to-challenge-your-own-analysis-so-others-wont-b3745919d098">How to Challenge Your Own Analysis So Others Won’t.</a></b> Data scientists are ultimately judged on the robustness of their interpretations and predictions; nobody gets everything right every single time, but to build a long-term record of success, Torsten Walbaum recommends integrating well-designed sanity checks into your workflow.</p></li>
-<li><p><b><a style="text-decoration:none"href="https://towardsdatascience.com/building-a-standout-data-science-portfolio-a-comprehensive-guide-6dabd0ec7059">Building a Standout Data Science Portfolio: A Comprehensive Guide.</a></b> In a tougher than usual job market, the way you present your experience and past success can make a difference. If you’re thinking of setting up a portfolio site to showcase your work—an increasingly popular choice—don’t miss Yu Dong’s streamlined guide to building one that helps you stand out.</p></li>
-<li><p><b><a style="text-decoration:none"href="https://towardsdatascience.com/your-first-year-as-a-data-scientist-a-survival-guide-f1d48fef2352">Your First Year as a Data Scientist: A Survival Guide.</a></b> Once you’ve secured your first job (congrats!), it might be tempting to think that the biggest hurdle is behind you. As Haden Pelletier explains, there are still quite a few pitfalls to avoid, and solid strategies for overcoming first-year challenges—from finding a supportive mentor to expanding your domain knowledge.</p></li>
-<li><p><b><a style="text-decoration:none"href="https://towardsdatascience.com/pitching-ai-innovation-in-your-company-5569507d3b97">Pitching (AI) Innovation in Your Company.</a></b> Some of the most frustrating moments at work can arrive when your great ideas are met with skepticism—or worse, indifference. Anna Via focuses on the adoption of cutting-edge AI workflows, and outlines several key steps you can take to convince others of the validity of your proposals; you can easily adapt these tactics to other areas, too.</p></li></ul>
-        <!-- Add more stories about AI here -->
-        <P> Happy Reading!</p>
-        <h5>Last Updated:July 22, 2024</h5>
     </section>
-<section id="gallery">
-        <h2>Gallery</h2>
-        <p><i>Nothing to See Here <sup>Yet</sup></i></p>
-        <span style='font-size:100px;'>&#128512;</span>
-    </section>
-
-     <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a style="text-decoration:none"href="mailto:mutukubill1@gmail.com">mutukubill1@gmail.com</a></p>
-        <p>Twitter: <a style="text-decoration:none"href="https://x.com/billkisivo">Bill SE</a></p>
-        <!-- Add more contact details as needed -->
-    </section>
+     <div class="social-media">
+    <a href="mailto:mutukubill1@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+    <a href="https://x.com/billkisivo" target="_blank"><i class="fab fa-x-twitter"></i></a>
+    <a href="https://instagram.com/bill__km" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/bill-mutuku-b3b4031aa/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/MutukuBill" target="_blank"><i class="fab fa-github"></i></a>
+</div>
     <footer>
-        <p>Copyright © 2024 Bill Mutuku. All rights reserved.</p>
+        <p>Copyright © 2025 Bill Mutuku. All rights reserved.</p>
     </footer>
      <script>
         // Show the scroll-up button when user scrolls down
