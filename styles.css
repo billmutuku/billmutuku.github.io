@@ -3,18 +3,19 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f8ff; /* Pale blue background */
-    width:100%;
+    width:auto;
     text-align: justify; /* This will justify the text */
 }
 
 header {
-    background-color: #4682b4; /* Steel blue header */
+    background-color: #000000; /* Black */
     color: #fff;
-    padding: 20px;
+    padding-top: 80px;
     text-align: center;
     overflow: hidden;
     white-space: nowrap;
-    width:100%;
+    width:auto;
+	height: 350px;
 }
 
 
@@ -36,7 +37,7 @@ nav {
     color: #fff;
     padding: 10px;
     text-align: center;
-    width:100%;
+    width:auto;
 }
 
 nav a {
@@ -52,27 +53,14 @@ section {
 }
 
 footer {
-    background-color: #4682b4; /* Steel blue footer */
+    background-color: #000000; /* Black */
     color: #fff;
     padding: 10px;
     text-align: center;
     bottom: 0;
-    width: 100%;
+    width: auto;
 }
 
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    justify-items: center;
-    align-items: center;
-}
-
-.gallery img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px; /* Rounded corners for images */
-}
 /* Style for the scroll-up button */
         #scrollUpBtn {
             display: none;
@@ -120,3 +108,23 @@ footer {
         font-size: 20px; /* Slightly smaller icons on mobile */
     }
 }
+
+.section1 {
+    text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+    #bill {
+        font-size: 70px;  /* Increase h1 size on PC */
+		padding-bottom:5px;
+    }
+}
+
+#datascience{
+	padding-bottom:20px;
+}
+
+#bill {
+		padding-bottom:5px;
+		font-family: 'Montserrat', sans-serif;
+    }
