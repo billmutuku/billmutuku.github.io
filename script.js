@@ -60,19 +60,48 @@ async function fetchTechNews() {
 
 window.addEventListener('DOMContentLoaded', fetchTechNews);
 
+// AI-Powered Quote Generator
+const quotes = [
+    "The question of whether a computer can think is no more interesting than the question of whether a submarine can swim. — Edsger W. Dijkstra",
+    "AI is likely to be the best or worst thing to happen to humanity. — Stephen Hawking",
+    "The future belongs to those who see possibilities before they become obvious. — John Sculley",
+    "Technology is a useful servant but a dangerous master. — Christian Lous Lange",
+    "You affect the world by what you browse. — Tim Berners-Lee",
+    "It has become appallingly obvious that our technology has exceeded our humanity. — Albert Einstein",
+    "AI will be the best or worst thing ever for humanity. We do not yet know which. — Elon Musk",
+    "The real problem is not whether machines think but whether men do. — B.F. Skinner",
+    "Computers are incredibly fast, accurate, and stupid; humans are incredibly slow, inaccurate, and brilliant; together they are powerful. — Albert Einstein",
+    "The only way to discover the limits of the possible is to go beyond them into the impossible. — Arthur C. Clarke",
+    "First we build the tools, then they build us. — Marshall McLuhan",
+    "What we know is a drop, what we don’t know is an ocean. — Isaac Newton",
+    "Technology is best when it brings people together. — Matt Mullenweg",
+    "Never trust a computer you can’t throw out a window. — Steve Wozniak",
+    "The best way to predict the future is to invent it. — Alan Kay",
+    "Success is a lousy teacher. It seduces smart people into thinking they can’t lose. — Bill Gates",
+    "Robots are not going to replace humans, they will make their jobs much more humane. — Sabine Hauert",
+    "Technology gives the quietest student a voice. — Jerry Blumengarten",
+    "The danger of AI is not that it will become evil, but that it will become competent at achieving its goals. — Nick Bostrom",
+    "Everything is theoretically impossible, until it is done. — Robert A. Heinlein",
+    "We are stuck with technology when what we really want is just stuff that works. — Douglas Adams",
+    "AI doesn’t have to be evil to destroy humanity—it could simply be competent. — Elon Musk",
+    "If we continue to develop our technology without wisdom or prudence, our servant may prove to be our executioner. — Omar N. Bradley"
+];
 
-// Typing Effect Script
-const text = "I visualize a time when we will be to robots what dogs are to humans, and I’m rooting for the machines. —Claude Shannon";
-let index = 0;
-function typeWriter() {
-    if (index < text.length) {
-        document.getElementById("typing-text").innerHTML += text.charAt(index);
-        index++;
-        setTimeout(typeWriter, 50);
+document.getElementById("generate-quote").addEventListener("click", function() {
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    document.getElementById("quote-text").textContent = quotes[randomIndex];
+});
+
+// Visitor Counter using localStorage
+document.addEventListener("DOMContentLoaded", function () {
+    let visitCount = localStorage.getItem("visitCount");
+    
+    if (!visitCount) {
+        visitCount = 1;
+    } else {
+        visitCount = parseInt(visitCount) + 1;
     }
-}
-
-window.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("typing-text").innerHTML = ""; // Clear previous text
-    typeWriter();
+    
+    localStorage.setItem("visitCount", visitCount);
+    document.getElementById("visit-counter").textContent = `Visits: ${visitCount}`;
 });
