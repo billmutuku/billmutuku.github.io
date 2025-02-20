@@ -120,6 +120,18 @@ footer {
     }
 }
 
+@media(max-width: 768px) {
+    #bill {
+        font-size: 50px;  /* Increase h1 size on Mobile */
+		padding-bottom:5px;
+    }
+	
+	@media(max-width: 768px) {
+    #datascience {
+        font-size: 30px;  /* Increase h1 size on Mobile */
+		padding-bottom:5px;
+    }
+}
 #datascience{
 	padding-bottom:20px;
 }
