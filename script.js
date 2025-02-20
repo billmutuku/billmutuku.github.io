@@ -19,25 +19,35 @@
 
 
 async function fetchTechNews() {
-    const apiKey = 'e9895e3b02204c63b5d014b9b7e220ab';
     const newsContainer = document.getElementById('news-feed');
+    newsContainer.innerHTML = '<p>Loading news...</p>';
 
     try {
-        const response = await fetch(`https://newsapi.org/v2/top-headlines?category=technology&apiKey=${apiKey}`);
+        const response = await fetch('https://api.gdeltproject.org/api/v2/doc/doc?query=artificial+intelligence&format=json', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP Error! Status: ${response.status}`);
+        }
+
         const data = await response.json();
+        console.log("GDELT API Response:", data); // Debugging: Log response in console
 
-        console.log("API Response:", data); // Debugging step
-
-        if (data.status !== "ok") {
-            throw new Error(data.message || "Error fetching news");
+        if (!data.documents || data.documents.length === 0) {
+            throw new Error("No news articles found.");
         }
 
         newsContainer.innerHTML = ''; // Clear previous content
-        data.articles.slice(0, 6).forEach(article => {
+
+        data.documents.slice(0, 6).forEach(article => {
             newsContainer.innerHTML += `
                 <div class="news-card">
                     <h3>${article.title}</h3>
-                    <p>${article.description || 'No description available.'}</p>
+                    <p>${article.excerpt || 'No description available.'}</p>
                     <a href="${article.url}" target="_blank" class="read-more">Read More →</a>
                 </div>`;
         });

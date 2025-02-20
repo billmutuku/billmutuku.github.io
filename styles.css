@@ -8,17 +8,17 @@ body {
 }
 
 header {
-    background-color: #000000; /* Black */
+    background: linear-gradient(135deg, #000000, #0a0a23);/* Black */
     color: #fff;
     padding-top: 80px;
     text-align: center;
     overflow: hidden;
     white-space: nowrap;
     width:auto;
-	height: 350px;
+	height: 450px;
 }
 nav {
-    background-color: #454545; /* Black */
+    background-color: #000000; /* Steel Blue */
     color: #fff;
     padding: 10px;
     text-align: center;
@@ -289,7 +289,7 @@ footer {
     background-color: #eef2f3;
 }
 
-.news-grid, .events-grid {
+.news-grid {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -297,7 +297,7 @@ footer {
     margin-top: 20px;
 }
 
-.news-card, .event-card {
+.news-card{
     background: white;
     border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -307,16 +307,16 @@ footer {
     transition: transform 0.3s ease-in-out;
 }
 
-.news-card:hover, .event-card:hover {
+.news-card:hover {
     transform: scale(1.05);
 }
 
-.news-card h3, .event-card h3 {
+.news-card h3 {
     color: #333;
     font-size: 18px;
 }
 
-.news-card p, .event-card p {
+.news-card p{
     color: #666;
     font-size: 14px;
 }
@@ -335,3 +335,58 @@ footer {
 .read-more:hover {
     background-color: #0056b3;
 }
+
+/* CSS for Work With Me Section */
+.work-container {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #000000, #2a003b);
+    color: #fff;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.work-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 700px;
+    margin: auto;
+}
+
+.work-item {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    transform: rotate(-2deg);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.work-item:hover {
+    transform: rotate(2deg) scale(1.05);
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 25px;
+    background: #4682B4;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+    background: #ff4757;
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
