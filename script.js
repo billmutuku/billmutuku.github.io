@@ -59,3 +59,20 @@ async function fetchTechNews() {
 }
 
 window.addEventListener('DOMContentLoaded', fetchTechNews);
+
+
+// Typing Effect Script
+const text = "I visualize a time when we will be to robots what dogs are to humans, and I’m rooting for the machines. —Claude Shannon";
+let index = 0;
+function typeWriter() {
+    if (index < text.length) {
+        document.getElementById("typing-text").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 50);
+    }
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("typing-text").innerHTML = ""; // Clear previous text
+    typeWriter();
+});
