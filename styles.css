@@ -17,21 +17,6 @@ header {
     width:auto;
 	height: 350px;
 }
-
-
-  .moving-text {
-   
-    animation: moveText 15s linear infinite;
-  }
-  
-  @keyframes moveText {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
 nav {
     background-color: #87ceeb; /* Sky blue navigation */
     color: #fff;
@@ -46,6 +31,21 @@ nav a {
     padding: 0 10px;
     font-weight: bold; /* Make the text bold */
 }
+
+  .moving-text {
+   
+    animation: moveText 15s linear infinite;
+  }
+  
+  @keyframes moveText {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
 
 section {
     padding: 20px;
