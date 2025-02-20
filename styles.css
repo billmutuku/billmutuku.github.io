@@ -12,7 +12,8 @@ header {
     color: #fff;
     padding-top: 80px;
     text-align: center;
-  
+    overflow: hidden;
+    white-space: nowrap;
     width:auto;
 	height: 450px;
 }
@@ -44,8 +45,7 @@ nav a {
       transform: translateX(-100%);
     }
   }
-
-
+  
 section {
     padding: 20px;
     margin-bottom: 20px;
