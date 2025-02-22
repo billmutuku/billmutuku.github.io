@@ -105,3 +105,16 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("visitCount", visitCount);
     document.getElementById("visit-counter").textContent = `Visits: ${visitCount}`;
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const parallaxImage = document.querySelector(".parallax-image");
+
+  window.addEventListener("scroll", function() {
+    const scrollPosition = window.scrollY;
+    const zoomLevel = 1.2 - (scrollPosition * 0.002); // Adjust zoom based on scroll
+    const translateY = scrollPosition * 0.5; // Parallax effect (move slower than scroll)
+
+    // Apply transformations
+    parallaxImage.style.transform = `scale(${Math.max(zoomLevel, 1)}) translateY(${translateY}px)`;
+  });
+});
