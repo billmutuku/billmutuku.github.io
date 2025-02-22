@@ -536,7 +536,7 @@ section.story-container.visible{
 
 /* Parallax image */
 .parallax-image {
-  background-image: url('https://source.unsplash.com/1600x900/?nature,mountains'); /* Replace with your image */
+  background-image: url('blog.jpg'); /* Replace with your image */
   background-size: cover;
   background-position: center;
   height: 120%; /* Slightly taller than the container */
@@ -549,13 +549,3 @@ section.story-container.visible{
   transition: transform 0.5s ease-out;
 }
 
-/* Content sections */
-.content {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: #f0f0f0;
-  margin: 10px 0;
-}
