@@ -207,13 +207,13 @@ section.story-container.visible{
 }
 
 .project h3 {
-    font-size: 22px;
+    font-size: 24px;
     margin-bottom: 10px;
 }
 
 .project p {
    margin: 0 15px 15px;
-    color: #666;
+    color: #776;
 }
 
 .project-btn {
@@ -524,23 +524,74 @@ section.story-container.visible{
     to { opacity: 1; transform: scale(1); }
 }
 
+/* Images as backrgound for projects*/
+.trading-simulator {
+    background-image: url('tading.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    padding: 20px;
+    color: white; /* Ensure text is visible */
+    position: relative;
+	
+}
+
+/* Create an overlay for blur effect */
+.trading-simulator::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(2px); /* Adjust blur intensity */
+    z-index: 0;
+}
+
+/* Ensure text appears on top */
+.trading-simulator h3, 
+.trading-simulator p, 
+.trading-simulator a {
+    position: relative;
+    z-index: 1;
+}
 
 
-.parallax-container {
-            position: relative;
-            height: 100vh;
-            overflow: hidden;
-        }
 
-        .parallax-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('blog.jpg'); /* Replace with your image */
-            background-size: cover;
-            background-position: center;
-            transform: scale(1.1); /* Initial zoom-in */
-            transition: transform 0.1s linear;
-        }
+.podcast {
+    background-image: url('podcast.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    padding: 20px;
+    color: white; /* Ensure text is visible */
+    position: relative;
+	
+}
+
+/* Create an overlay for blur effect */
+.podcast::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(2px); /* Adjust blur intensity */
+    z-index: 0;
+}
+
+/* Ensure text appears on top */
+.podcast h3, 
+.podcast p, 
+.podcast a {
+    position: relative;
+    z-index: 1;
+}
+.podcast p{
+	color:yellow;
+}

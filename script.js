@@ -105,10 +105,3 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("visitCount", visitCount);
     document.getElementById("visit-counter").textContent = `Visits: ${visitCount}`;
 });
-
-
-window.addEventListener("scroll", function() {
-            let scrollPosition = window.scrollY;
-            let scaleValue = 1 + scrollPosition * -0.0005; // Adjust zoom speed
-            document.querySelector(".parallax-image").style.transform = `scale(${scaleValue}) translateY(${scrollPosition * 0.5}px)`;
-        });
