@@ -526,26 +526,21 @@ section.story-container.visible{
 
 
 
-
-/* Parallax image container */
 .parallax-container {
-  height: 100vh; /* Full viewport height */
-  overflow: hidden;
-  position: relative;
-}
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
 
-/* Parallax image */
-.parallax-image {
-  background-image: url('blog.jpg'); /* Replace with your image */
-  background-size: cover;
-  background-position: center;
-  height: 120%; /* Slightly taller than the container */
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transform: scale(1.2); /* Start slightly zoomed in */
-  transition: transform 0.5s ease-out;
-}
-
+        .parallax-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('blog.jpg'); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            transform: scale(1.1); /* Initial zoom-in */
+            transition: transform 0.1s linear;
+        }
