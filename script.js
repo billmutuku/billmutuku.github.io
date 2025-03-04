@@ -105,3 +105,9 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("visitCount", visitCount);
     document.getElementById("visit-counter").textContent = `Visits: ${visitCount}`;
 });
+
+//script for navbar on mobile phones
+function toggleNav() {
+            document.querySelector(".nav-links").classList.toggle("active");
+            document.querySelector(".hamburger").classList.toggle("active");
+        }

@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -19,20 +20,7 @@ header {
 	height: 450px;
 	animation: fadeIn 5.5s ease-in-out;
 }
-nav {
-    background-color: #000000; /* Steel Blue */
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    width:auto;
-}
 
-nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 0 10px;
-    font-weight: bold; /* Make the text bold */
-}
 #section1{
     word-wrap: break-word;  /* Breaks long words */
     overflow-wrap: break-word; /* Ensures long text breaks */
@@ -88,6 +76,83 @@ footer {
     width: 100%;
     z-index: 1000; /* Ensure it's above other content */
 }
+
+.logo{
+	background-image: url('blog.jpeg');
+}
+
+/*Navbar code for both pcs and phones */
+.navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, #000000, #0a0a23);/* Black */
+            color: white;
+			position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it's above other content */
+}
+      
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        .nav-links li {
+            margin: 0 15px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+        .bar {
+            width: 30px;
+            height: 4px;
+            background: white;
+            margin: 5px;
+            transition: 0.3s;
+        }
+        
+        /* Mobile Styles */
+        @media screen and (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                background: linear-gradient(135deg, #000000, #0a0a23);/* Black */
+                width: 200px;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: top;
+                transition: 0.3s;
+				padding:50px;
+            }
+            .nav-links.active {
+                right: 0;
+				padding:20px;
+            }
+			.nav-links li {
+            padding: 15px;
+        }
+            .hamburger {
+                display: block;
+            }
+            .hamburger.active .bar:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+            .hamburger.active .bar:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+        }
+	/* Navbar code ends here */
 
 .social-media {
     display: flex;
@@ -442,7 +507,7 @@ section.story-container.visible{
     display: inline-block;
     margin-top: 30px;
     padding: 12px 25px;
-    background: #454545;
+    background: #007bff;
     color: white;
     font-size: 18px;
     font-weight: bold;
@@ -452,7 +517,7 @@ section.story-container.visible{
 }
 
 .cta-button:hover {
-    background: #007bff;
+    background: #0056b3;
     transform: scale(1.1);
 }
 
@@ -501,7 +566,7 @@ section.story-container.visible{
 
 .quote-btn {
     padding: 10px 20px;
-    background-color: #454545;
+    background-color: #007bff;
     color: white;
     border: none;
     border-radius: 5px;
@@ -511,7 +576,7 @@ section.story-container.visible{
 }
 
 .quote-btn:hover {
-    background-color: #007bff;
+    background-color: #0056b3;
     transform: scale(1.05);
 }
 
