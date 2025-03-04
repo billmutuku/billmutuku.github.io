@@ -17,6 +17,7 @@ header {
     white-space: nowrap;
     width:auto;
 	height: 450px;
+	animation: fadeIn 5.5s ease-in-out;
 }
 nav {
     background-color: #000000; /* Steel Blue */
